@@ -22,12 +22,31 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                      <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
+                      <Component id="newGameButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dice1" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dice2" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dice3" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dice4" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dice5" min="-2" pref="81" max="-2" attributes="0"/>
+                      <EmptySpace pref="73" max="32767" attributes="0"/>
+                      <Component id="rollButton" min="-2" pref="95" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="titleLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-              <Component id="newGameButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="296" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -39,7 +58,16 @@
                   <Component id="titleLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="newGameButton" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="361" max="32767" attributes="0"/>
+              <EmptySpace pref="334" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="dice1" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                  <Component id="dice2" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                  <Component id="dice3" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                  <Component id="dice4" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                  <Component id="dice5" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                  <Component id="rollButton" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,6 +85,39 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="New Game"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="dice1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dice1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="dice2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dice2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="dice3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dice3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="dice4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dice4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JToggleButton" name="dice5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dice5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="rollButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Roll"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rollButtonActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

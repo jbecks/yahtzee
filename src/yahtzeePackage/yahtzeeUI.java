@@ -4,6 +4,8 @@
  */
 package yahtzeePackage;
 
+import java.util.Random;
+
 /**
  *
  * @author Owen
@@ -28,6 +30,12 @@ public class yahtzeeUI extends javax.swing.JFrame {
 
         titleLabel = new javax.swing.JLabel();
         newGameButton = new javax.swing.JButton();
+        dice1 = new javax.swing.JToggleButton();
+        dice2 = new javax.swing.JToggleButton();
+        dice3 = new javax.swing.JToggleButton();
+        dice4 = new javax.swing.JToggleButton();
+        dice5 = new javax.swing.JToggleButton();
+        rollButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,16 +44,49 @@ public class yahtzeeUI extends javax.swing.JFrame {
 
         newGameButton.setText("New Game");
 
+        dice1.setText("Dice1");
+
+        dice2.setText("Dice2");
+
+        dice3.setText("Dice3");
+
+        dice4.setText("Dice4");
+
+        dice5.setText("Dice5");
+
+        rollButton.setText("Roll");
+        rollButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rollButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(titleLabel)
-                .addGap(99, 99, 99)
-                .addComponent(newGameButton)
-                .addContainerGap(296, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(titleLabel)
+                        .addGap(99, 99, 99)
+                        .addComponent(newGameButton)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dice1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dice2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dice3, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dice4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dice5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                        .addComponent(rollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -54,11 +95,48 @@ public class yahtzeeUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(titleLabel)
                     .addComponent(newGameButton))
-                .addContainerGap(361, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 334, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dice1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dice2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dice3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dice4, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dice5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rollButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void rollButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollButtonActionPerformed
+        // for now, just randomize the dice and display their values
+        Random rand = new Random();
+        int randomNumber;
+        if (!dice1.isSelected()) {
+            randomNumber = rand.nextInt(5) + 1;
+            dice1.setText(Integer.toString(randomNumber));
+        }
+        if (!dice2.isSelected()) {
+            randomNumber = rand.nextInt(5) + 1;
+            dice2.setText(Integer.toString(randomNumber));
+        }
+        if (!dice3.isSelected()) {
+            randomNumber = rand.nextInt(5) + 1;
+            dice3.setText(Integer.toString(randomNumber));
+        }
+        if (!dice4.isSelected()) {
+            randomNumber = rand.nextInt(5) + 1;
+            dice4.setText(Integer.toString(randomNumber));
+        }
+        if (!dice5.isSelected()) {
+            randomNumber = rand.nextInt(5) + 1;
+            dice5.setText(Integer.toString(randomNumber));
+        }
+        
+        
+        
+    }//GEN-LAST:event_rollButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -95,7 +173,13 @@ public class yahtzeeUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton dice1;
+    private javax.swing.JToggleButton dice2;
+    private javax.swing.JToggleButton dice3;
+    private javax.swing.JToggleButton dice4;
+    private javax.swing.JToggleButton dice5;
     private javax.swing.JButton newGameButton;
+    private javax.swing.JButton rollButton;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
 }
